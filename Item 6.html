@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+  <body>
+<!-- Script -->
+      <script>
+              function goHome() {
+                  window.location.assign("inbox.html")
+              }
+      </script>
+<!--internal CSS -->
+      <style>
+        p, h1{text-align: center; font-family: Gadugi;}
+        table{font-family: Gadugi; margin-left: auto; margin-right: auto; width: 60%;}
+        #buttons{text-align: center;}
+        #footer{font-style: italic}
+      </style>
+<!-- Email content -->
+      <table>
+          <tr>
+              <td id = "buttons";>
+                  <button type="button" onclick="scoreIncrease(0, 2)">Keep</button>
+                  <button type="button" onclick="scoreIncrease(1, 2)">Report</button>
+                  <button type ="button" onclick="goHome()">Back</button>
+              </td>
+          </tr>
+          <tr>
+            <td style = "background-color: #b3d9ff;"><b>FROM: </b>UMD Alerts</td>
+          </tr>
+          <tr>
+            <td style = "background-color: #b3d9ff;"><b>SUBJECT: </b>UMD Alert Test</td>
+          </tr>
+          <tr>
+              <td>
+                <p>
+                  First Wednesday of each month at 11:55 a.m., the campus tests the UMD Alert Emergency Notification System,
+                  Alertus System and Early Warning Sirens.  These are only tests.
+                </p>
+                <p>
+                  In the event of an emergency, you will receive text and email notifications with information
+                  regarding the nature of the emergency and necessary protective actions.
+                </p>
+                <p>
+                  UMD affiliates may edit their mobile device settings at <a href ="https://www.alert.umd.edu."> alert.umd.edu</a>
+                </p>
+                <p>
+                  Contact Information:
+                </p>
+                <p>
+                  University of Maryland Police <br />
+                  Emergency Number 301-405-3333/ #3333 from a mobile phone/ 911
+                </p>
+                <p>
+                  Prince George's County Police <br />
+                  911 from mobile phone / 301-352-1200 (non-emergency) / 911
+                </p>
+                <p id = "footer">
+                  Sent by University of Maryland Police Department <br/>
+                  University of Maryland, College Park, MD 20742
+                </p>
+              </td>
+          </tr>
+      </table>
+  </body>
+</html>
