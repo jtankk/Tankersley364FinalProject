@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- This email is safe and should be kept. point for keep, point for report. -->
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Email 4</title>
+<!-- Script -->
+    <script>
+            function goHome() {
+                window.location.assign("inbox.html")
+            }
+    </script>
+<!--Internal CSS -->
+    <style>
+      p, h1{text-align: center; font-family: Gadugi;}
+      table{font-family: Gadugi; margin-left: auto; margin-right: auto; width: 60%;}
+      #buttons{text-align: center;}
+    </style>
+</head>
+<!-- Email content -->
+<body>
+    <table>
+        <tr>
+            <td id = "buttons";>
+                <button type="button" onclick="scoreIncrease(0, 2)">Keep</button>
+                <button type="button" onclick="scoreIncrease(1, 2)">Report</button>
+                <button type ="button" onclick="goHome()">Back</button>
+            </td>
+        </tr>
+        <tr>
+          <td style = "background-color: #b3d9ff;"> <b>FROM: </b> Ticketmaster customer_support@ticketmaster.com </td>
+        </tr>
+        <tr>
+          <td style = "background-color: #b3d9ff;"> <b>SUBJECT: </b> You Just Scored Tickets to Jon Bellion: The Glory Sound Prep Tour</td>
+        </tr>
+        <tr>
+            <td>
+              <p>High Five! Your Order Details: <br/>
+                Order # 8675309/WDC<br/>
+                Event Date: Friday, June 14, 2019<br/>
+                Location: MGM National Harbor
+              </p>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

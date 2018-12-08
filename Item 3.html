@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Email 3</title>
+<!-- Script -->
+    <script>
+      function goHome() {
+            window.location.assign("inbox.html")
+      }
+    </script>
+<!-- Internal CSS -->
+    <style>
+      p, h1{font-family: Gadugi;}
+      table{font-family: Gadugi; margin-left: auto; margin-right: auto;}
+      #buttons{text-align: center; font-family: Gadugi;}
+    </style>
+</head>
+<!-- Email Content -->
+<body>
+    <table>
+      <tr>
+            <td id = "buttons";>
+                <button type="button" onclick="scoreIncrease(0, 2)">Keep</button>
+                <button type="button" onclick="scoreIncrease(1, 2)">Report</button>
+                <button type ="button" onclick="goHome()">Back</button>
+            </td>
+      </tr>
+      <tr>
+            <td style = "background-color: #b3d9ff;"> <b>FROM: </b> Maryland Today today@umd.edu </td>
+      </tr>
+      <tr>
+            <td style = "background-color: #b3d9ff;"> <b>SUBJECT: </b> IDEA Factory Groundbreaking; "American Idle" Class; Lessons Learned From Mizzou's Crisis.</td>
+      </tr>
+    <!-- Body of email (part with links) -->
+      <tr id = "mainBody">
+      <td>
+          <p>
+              <b>CAMPUS & COMMUNITY </b><br/>
+              <a href="url">An Innovative IDEA</a> <br/>
+              University Breaks Ground on E.A. Fernandez IDEA Factory
+          </p>
+    <p></p> <!-- Break for visual -->
+         <p>
+              <b>CAMPUS & COMMUNITY</b><br/>
+              <a href="url">American Idle</a><br/>
+              Honors College Students Study Laziness But Worry When Asked to Try It
+         </p>
+    <p></p> <!-- Break for visual -->
+        <p>
+            <b>CAMPUS & COMMUNITY</b><br/>
+            <a href="url">American Idle</a><br/>
+            Honors College Students Study Laziness But Worry When Asked to Try It
+        </p>
+    <p></p> <!-- Break for visual -->
+        <p>
+            <b>RESEARCH</b><br/>
+            <a href="url">Mizzou Crisis Recovery Has Lessons for Other Universities, Report Finds </a><br/>
+            Education Professor Leads National Study on Improving Racial Climate
+        </p>
+    <p></p> <!-- Break for visual -->
+
+    <!-- Table of events for the day -->
+          <table id = "eventsTable" style ="padding: 50px">
+              <tr>
+                  <th> Date </th>
+                  <th> Event </th>
+              </tr>
+              <tr>
+                  <td> Nov. 14</td>
+                  <td style = "padding: 0px 0px 0px 10px">Lunch With Leaders: Equal Rights Center</td>
+              </tr>
+              <tr>
+                  <td> Nov. 14</td>
+                  <td style = "padding: 00px 0px 0px 10px"> You Say You Want a Revolution? 1968 and Its Legacies</td>
+              </tr>
+              <tr>
+                  <td> Nov. 14</td>
+                  <td style = "padding: 0px 0px 0px 10px"> The Circle: Campus Conversations on Hate-Bias</td>
+              </tr>
+              <tr>
+                  <td> Nov. 14</td>
+                  <td style = "padding: 0px 0px 0px 10px"> Special Senate Meeting</td>
+              </tr>
+              <tr>
+                  <td colspan="2"><a href="url"> View Full Calendar </a> </td>
+              </tr></td>
+              </tr>
+          </table>
+    </table>
+</body>
+</html>
