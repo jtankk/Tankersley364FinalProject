@@ -16,6 +16,49 @@
             p, h1{font-family: Gadugi;}
             table{font-family: Gadugi; margin-left: auto; margin-right: auto;}
             #buttons{text-align: center; font-family: Gadugi;}
+/* Modal CSS */
+          .modalDialog {
+            position: fixed;
+            font-family: Gadugi;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: none;
+            z-index: 99999;
+            opacity:0;
+            pointer-events: none;
+          }
+          .modalDialog:target {
+            opacity:1;
+            pointer-events: auto;
+          }
+          .modalDialog > div {
+
+            width: 400px;
+            position: relative;
+            margin: 10% auto;
+            padding: 5px 20px 13px 20px;
+            border-radius: 10px;
+            background: #fff;
+            background: #cce6ff;
+          }
+        .close {
+          background: #19191a;
+          color: #FFFFFF;
+          line-height: 25px;
+          position: absolute;
+          right: -12px;
+          text-align: center;
+          top: -10px;
+          width: 24px;
+          text-decoration: none;
+          font-weight: bold;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          border-radius: 12px;
+        }
+          .close:hover { background: #0080ff; }
         </style>
   </head>
 <!-- Email Content -->
@@ -23,9 +66,9 @@
        <table>
          <tr>
               <td id = "buttons";>
-                  <button type="button" onclick="scoreIncrease(0, 2)">Keep</button>
-                  <button type="button" onclick="scoreIncrease(1, 2)">Report</button>
-                  <button type ="button" onclick="goHome()">Back</button>
+                <input type="button" value="Keep" onclick="window.location.href='#openKeep'"/>
+                <input type="button" value="Report" onclick="window.location.href='#openReport'"/>
+                <button type ="button" onclick="goHome()">Back</button>
               </td>
           </tr>
           <tr>
@@ -44,6 +87,26 @@
               </td>
           </tr>
       </table>
+<!--keep modal-->
+    <div id="openKeep" class="modalDialog">
+      <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2 style="text-align: center">OOPS!</h2>
+        <p>This one is spam!</p>
+        <p>This is a common phishing emai. Scammers are hoping you'll click the link which will probably take you to a site with malicious software.</p>
+        <button type ="button" onclick="goHome()">Back to Inbox</button>
+      </div>
+    </div>
 
+<!-- report modal -->
+    <div id="openReport" class="modalDialog">
+      <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2 style="text-align: center">Good Job!</h2>
+        <p>This is spam! </p>
+        <p>It's always best to avoid clicking suspicious links!</p>
+        <button type ="button" onclick="goHome()">Back to Inbox</button>
+      </div>
+    </div>
 </body>
 </html>

@@ -2,46 +2,111 @@
 <!-- This email is not safe and should not be kept. Point for report, loss of point for keep -->
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title>Email 2</title>
+  <head>
+      <meta charset="utf-8" />
+      <title>Email 2</title>
 <!-- Script -->
-    <script>
-      function goBack() {
-          window.location.assign("inbox.html")
-      }
-    </script>
+      <script>
+//Return to inbox
+        function goHome() {
+            window.location.assign("inbox.html")
+              }
+      </script>
 <!-- Internal CSS -->
-    <style>
-      p, h1{text-align: center; font-family: Gadugi;}
-      table{font-family: Gadugi;}
-      #buttons{text-align: center; font-family: Gadugi;}
-    </style>
-</head>
+      <style>
+        p, h1{text-align: center; font-family: Gadugi;}
+        table{font-family: Gadugi;}
+        #buttons{text-align: center; font-family: Gadugi;}
+/* Modal CSS */
+          .modalDialog {
+            position: fixed;
+            font-family: Gadugi;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: none;
+            z-index: 99999;
+            opacity:0;
+            pointer-events: none;
+          }
+          .modalDialog:target {
+            opacity:1;
+            pointer-events: auto;
+          }
+          .modalDialog > div {
+
+            width: 400px;
+            position: relative;
+            margin: 10% auto;
+            padding: 5px 20px 13px 20px;
+            border-radius: 10px;
+            background: #fff;
+            background: #cce6ff;
+          }
+        .close {
+          background: #19191a;
+          color: #FFFFFF;
+          line-height: 25px;
+          position: absolute;
+          right: -12px;
+          text-align: center;
+          top: -10px;
+          width: 24px;
+          text-decoration: none;
+          font-weight: bold;
+          -webkit-border-radius: 12px;
+          -moz-border-radius: 12px;
+          border-radius: 12px;
+        }
+          .close:hover { background: #0080ff; }
+      </style>
+  </head>
 <!-- Email Content -->
-<body>
-    <table style = "margin-left : auto; margin-right: auto;">
-      <tr>
-          <td id = "buttons";>
-              <button type="button" onclick="scoreIncrease(0, 2)">Keep</button>
-              <button type="button" onclick="scoreIncrease(1, 2)">Report</button>
-              <button type ="button" onclick="goBack()">Back</button>
-          </td>
-      </tr>
-      <tr>
-          <td style = "background-color: #b3d9ff;"> <b>FROM: </b> United Nation Department of Humanitarian Affairs [infodeskun@mail.com] </td>
-      </tr>
-      <tr>
-          <td style = "background-color: #b3d9ff;"> <b>SUBJECT: </b> (CONGRATULATIONS)You Have Won 2,000,000.00 Pounds</td>
-      </tr>
-      <tr>
-          <td>
-            <p> CONTACT REMITTANCE OFFICER FOR CLAIMS:
-                <br/>Mrs Patricia Morgan
-                <br/>Email: potexalternative@gmail.com
-            </p>
-          </td>
-      </tr>
-    </table>
-</body>
+  <body>
+      <table style = "margin-left : auto; margin-right: auto;">
+        <tr> <!-- Buttons -->
+            <td id = "buttons";>
+                <input type="button" value="Keep" onclick="window.location.href='#openKeep'"/>
+                <input type="button" value="Report" onclick="window.location.href='#openReport'"/>
+                <button type ="button" onclick="goHome()">Back</button>
+            </td>
+        </tr>
+        <tr>
+            <td style = "background-color: #b3d9ff;"> <b>FROM: </b> United Nation Department of Humanitarian Affairs [infodeskun@mail.com] </td>
+        </tr>
+        <tr>
+            <td style = "background-color: #b3d9ff;"> <b>SUBJECT: </b> (CONGRATULATIONS)You Have Won 2,000,000.00 Pounds</td>
+        </tr>
+        <tr>
+            <td>
+              <p> CONTACT REMITTANCE OFFICER FOR CLAIMS:
+                  <br/>Mrs Patricia Morgan
+                  <br/>Email: potexalternative@gmail.com
+              </p>
+            </td>
+        </tr>
+      </table>
+<!--keep modal-->
+    <div id="openKeep" class="modalDialog">
+      <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2 style="text-align: center">OOPS!</h2>
+        <p>This one is spam! Turns out, nobody wants to make you rich.</p>
+        <p>These schemes are very common, and scammers are hoping that people will respond with their personal bank information.</p>
+        <button type ="button" onclick="goHome()">Back to Inbox</button>
+      </div>
+    </div>
+
+<!-- report modal -->
+    <div id="openReport" class="modalDialog">
+      <div>
+        <a href="#close" title="Close" class="close">X</a>
+        <h2 style="text-align: center">Good Job!</h2>
+        <p>This is spam! </p>
+        <p>Nobody is going to get ahold of your data!</p>
+        <button type ="button" onclick="goHome()">Back to Inbox</button>
+      </div>
+    </div>
+  </body>
 </html>
